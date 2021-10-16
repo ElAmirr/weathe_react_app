@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
                 })
                 .then(data => {
                     let city = document.querySelector('.location .city');
-                    city.innerText = `${data.city.name}, ${data.city.country}`
+                    city.innerText = `${data.city.name}, ${data.city.country}`;
                 
                     let now = new Date();
                     
@@ -39,8 +39,8 @@ window.addEventListener("load", () => {
                 });
             });
         }
-    });
- 
+    }); 
+
 const celsiusbtn = document.querySelector('.celsius-btn');
 celsiusbtn.addEventListener("click", celsiusFormat);
 
@@ -54,7 +54,7 @@ fahrenheitbtn.addEventListener("click", fahrenheitFormat);
 
 function fahrenheitFormat() {
     let temp = document.querySelector('.current .temp');
-    temp.innerHTML= `${Math.round(((responce.list[0].main.temp)*1.8)+32)}<span>°c</span>`;
+    temp.innerHTML= `${Math.round(((responce.list[0].main.temp)*1.8)+32)}<span>°f</span>`;
 }
 
 
@@ -99,12 +99,14 @@ function data (responce) {
     hilow.innerText = `Max:${Math.round(responce.list[0].main.temp_max)}°c~Min:${Math.round(responce.list[0].main.temp_min)}°c`;
 
     //mini card
-    let data = document.querySelector('container mini-card');
-    for (let i = 0; 6; i++) {
-        data.innerHTML = `<div class="time-mini">${timeBuilderMini(now)}</div>`;
-        data.innerHTML = `<img src=`${api.iconurl}${responce.list[i].main.icon}@2x.png`/>`;
-        data.innerHTML = `<div class="temp_mini">${Math.round(responce.list[i].main.temp)}<span>°c</span>`;
-}
+    let data = document.querySelector('.container .mini-card');
+    for (let i = 0; 5; i++) {
+        data.innerHTML = `<div class="time-mini">${timeBuilderMini(now, i)}</div>`;
+        data.innerHTML = `<img src=${api.iconurl}${responce.list[i].main.icon}@2x.png/>`;
+        data.innerHTML = `<div class="temp_mini">${Math.round(responce.list[i].main.temp)}<span>°c</span>`; 
+    }   
+    //change the next mini card
+    
 
 function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", 
@@ -127,8 +129,51 @@ function timeBuilder (d) {
     return `${hour}:${minute}`;
 }
 // time format for mini card
-function timeBuilderMini (d, i=0) {
+function timeBuilderMini (d, i ) {
     let hour = d.getHours() + i;
     if (hour < 10) hour = '0' + hour;
     return `${hour}:00`;
+}
+}
+
+
+
+// slide show mini temp js code
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+
+// Ato dark mode 
+var today = new Date().getHours();
+if (today >= 8 && today <= 16) {
+    document.body.style.background = "linear-gradient(to right top, #65dfc9, #6cdbeb)";
+} else {
+    document.body.style.background = "linear-gradient(to right top, #536976, #292E49";
+    document.body.style.color = "#FD746C";
 }
