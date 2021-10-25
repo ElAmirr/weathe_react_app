@@ -1,101 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="slide.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="header-container">
-        <header>
-            <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city ...">
-            <input class="celsius-btn" type="button" value="Celsiu">
-            <input class="fahrenheit-btn" type="button" value="Fahrenheit">
-        </header>
-    </div>
-        <div class="glass">
-            <div class="container">
-                <div class="card">
-                    <div class="content">
-                        <div class="location">
-                            <div class="city">Kerkennah, TN</div>
-                            <div class="date">tursday, 9 june 2062</div>
-                            <div class="time">09:15</div>
-                        </div>
-                        <div class="current">
-                            <div class="temp">27<span>°c</span></div>
-                            <div class="weather">Sunny</div>
-                            <div class="hi-low">Max:32°c~Min:25°c</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <div class="location">
-                            <div class="city">Kerkennah, TN</div>
-                            <div class="date">tursday, 9 june 2062</div>
-                            <div class="time">09:15</div>
-                        </div>
-                        <div class="current">
-                            <div class="temp">27<span>°c</span></div>
-                            <div class="weather">Sunny</div>
-                            <div class="hi-low">Max:32°c~Min:25°c</div>
-                        </div>
-                    </div>
-                </div>                <div class="card">
-                    <div class="content">
-                        <div class="location">
-                            <div class="city">Kerkennah, TN</div>
-                            <div class="date">tursday, 9 june 2062</div>
-                            <div class="time">09:15</div>
-                        </div>
-                        <div class="current">
-                            <div class="temp">27<span>°c</span></div>
-                            <div class="weather">Sunny</div>
-                            <div class="hi-low">Max:32°c~Min:25°c</div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-            <!-- Full-width images with number and caption text -->
-
-                <div class="mySlides fade ">
-                    <div class="mySlides one">11111111111</div>
-                </div>
-
-                <div class="mySlides fade ">
-                    <div class="full-card two">2222222222</div>
-                </div>
-
-                <div class="mySlides fade ">
-                    <div class="full-card three">333333333</div>
-                </div>
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <br>
-
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-
-            </div> 
-            
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="header-container">
+            <header>
+                <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city ...">
+                <input class="celsius-btn" type="button" value="Celsiu">
+                <input class="fahrenheit-btn" type="button" value="Fahrenheit">
+            </header>
         </div>
-    <script src="main.js"></script>
-    <script src="slide.js"></script>
-</body>
+            <div class="glass">
+                <div class="container">
+                    <div class="card">
+                        <div class="content">
+                            <div class="location">
+                                <div class="city">Kerkennah, TN</div>
+                                <div class="date">tursday, 9 june 2062</div>
+                                <div class="time">09:15</div>
+                            </div>
+                            <div class="current">
+                                <div class="temp">27<span>°c</span></div>
+                                <div class="weather">Sunny</div>
+                                <div class="hi-low">Max:32°c~Min:25°c</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <div class="location">
+                                <div class="city">Kerkennah, TN</div>
+                                <div class="date">tursday, 9 june 2062</div>
+                                <div class="time">09:15</div>
+                            </div>
+                            <div class="current">
+                                <div class="temp">27<span>°c</span></div>
+                                <div class="weather">Sunny</div>
+                                <div class="hi-low">Max:32°c~Min:25°c</div>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="card">
+                        <div class="content">
+                            <div class="location">
+                                <div class="city">Kerkennah, TN</div>
+                                <div class="date">tursday, 9 june 2062</div>
+                                <div class="time">09:15</div>
+                            </div>
+                            <div class="current">
+                                <div class="temp">27<span>°c</span></div>
+                                <div class="weather">Sunny</div>
+                                <div class="hi-low">Max:32°c~Min:25°c</div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+
+                    <div class="mySlides fade ">
+                        <div class="full-card one"></div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <div class="full-card two"></div>
+                    </div>
+
+                    <div class="mySlides fade ">
+                        <div class="full-card three"></div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+
+                </div> 
+            </div>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        <script src="main.js"></script>
+    </body>
 </html>
-
-
-
